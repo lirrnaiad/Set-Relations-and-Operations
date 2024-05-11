@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sets.discremathsets.logic.Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="645.0" minWidth="10.0" prefWidth="381.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="645.0" minWidth="0.0" prefWidth="34.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="414.0" minWidth="3.0" prefWidth="384.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="45.0" prefWidth="413.0" text="Set A">
+               <font>
+                  <Font name="HoloLens MDL2 Assets" size="21.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="38.0" prefWidth="340.0">
+               <children>
+                  <Label text="{ ">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="setAField" prefHeight="38.0" prefWidth="380.0" />
+                  <Label text=" }">
+                     <font>
+                        <Font size="22.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+         <children>
+            <Label alignment="CENTER" prefHeight="45.0" prefWidth="417.0" text="Set B" textAlignment="CENTER">
+               <font>
+                  <Font name="HoloLens MDL2 Assets" size="21.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="38.0" prefWidth="340.0">
+               <children>
+                  <Label text="{ ">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="setBField" prefHeight="38.0" prefWidth="379.0" />
+                  <Label text=" }">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="138.0" prefWidth="318.0" GridPane.rowIndex="2">
+         <children>
+            <Button fx:id="resultsButton" alignment="CENTER" mnemonicParsing="false" onAction="#onResultsButtonClick" prefHeight="39.0" prefWidth="372.0" text="Get Set Relations" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="450.0" text="NOTE: Separate elements using a comma (,).">
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="15.0" right="15.0" />
+         </padding></VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+         <children>
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="408.0" text="Set A:">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets top="15.0" />
+               </padding></Label>
+            <Label fx:id="setAOutput" alignment="CENTER" prefHeight="31.0" prefWidth="412.0" text="N/A">
+               <font>
+                  <Font size="21.0" />
+               </font></Label>
+            <Label alignment="CENTER" prefHeight="27.0" prefWidth="433.0" text="Set B:">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+            <Label fx:id="setBOutput" alignment="CENTER" prefHeight="31.0" prefWidth="440.0" text="N/A">
+               <font>
+                  <Font size="21.0" />
+               </font></Label>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <children>
+            <Label fx:id="isEqualOrUnionLabel" alignment="CENTER" prefHeight="24.0" prefWidth="410.0" text="Equal Sets: ✘">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+            <Label fx:id="isEquivalentOrUnionResultLabel" alignment="CENTER" prefHeight="24.0" prefWidth="400.0" text="Equivalent Sets: ✘">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+            <Label fx:id="isASubsetOfBOrIntersectionLabel" alignment="CENTER" prefHeight="24.0" prefWidth="419.0" text="A is a subset of B: ✘">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+            <Label fx:id="isBSubsetOfAOrIntersectionResultLabel" alignment="CENTER" prefHeight="24.0" prefWidth="384.0" text="B is a subset of A: ✘">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+            <Label fx:id="isDisjointOrDifferenceAMinusBLabel" alignment="CENTER" prefHeight="24.0" prefWidth="384.0" text="Disjoint Sets: ✘">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+            <Label fx:id="DifferenceAMinusBResultLabel" alignment="CENTER" prefHeight="24.0" prefWidth="384.0" text="= ∅" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="DifferenceBMinusALabel" alignment="CENTER" prefHeight="24.0" prefWidth="384.0" text="B Minus A" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="DifferenceBMinusAResultLabel" alignment="CENTER" prefHeight="24.0" prefWidth="384.0" text="= ∅" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <children>
+            <Button fx:id="toggleButton" alignment="CENTER" mnemonicParsing="false" onAction="#onToggleButtonClick" prefHeight="35.0" prefWidth="359.0" snapToPixel="false" text="Switch to Set Operations">
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <GridPane.margin>
+            <Insets left="25.0" right="25.0" />
+         </GridPane.margin>
+      </VBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+         <children>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+         </children>
+         <GridPane.margin>
+            <Insets left="15.0" right="15.0" />
+         </GridPane.margin>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+         </children>
+         <GridPane.margin>
+            <Insets left="15.0" right="15.0" />
+         </GridPane.margin>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+         </children>
+         <GridPane.margin>
+            <Insets left="15.0" right="15.0" />
+         </GridPane.margin>
+      </HBox>
+   </children>
+</GridPane>
