@@ -1,7 +1,8 @@
 package com.sets.discremathsets.domain;
 
+import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Iterator;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class Set {
@@ -91,7 +92,7 @@ public class Set {
     public String toString() {
         StringBuilder setFormat = new StringBuilder();
         setFormat.append("{");
-        setFormat.append(set.stream().collect(Collectors.joining(", ")));
+        setFormat.append(String.join(", ", set));
         setFormat.append("}");
         return setFormat.toString();
     }
