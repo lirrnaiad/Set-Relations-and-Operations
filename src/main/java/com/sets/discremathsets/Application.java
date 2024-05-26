@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.HashSet;
 
 public class Application extends javafx.application.Application {
     @Override

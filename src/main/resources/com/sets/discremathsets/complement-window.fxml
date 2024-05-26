@@ -25,7 +25,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="universalSetTextField" prefHeight="25.0" prefWidth="518.0" />
+            <TextField fx:id="universalSetTextField" prefHeight="25.0" prefWidth="518.0" promptText="Separate elements using a comma ( , )." />
             <Label text="}">
                <font>
                   <Font size="24.0" />
@@ -48,7 +48,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="setATextField" prefHeight="25.0" prefWidth="518.0" />
+            <TextField fx:id="setATextField" prefHeight="25.0" prefWidth="518.0" promptText="Separate elements using a comma ( , )." />
             <Label text="}">
                <font>
                   <Font size="24.0" />

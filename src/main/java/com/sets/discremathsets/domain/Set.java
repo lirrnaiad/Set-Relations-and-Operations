@@ -24,6 +24,9 @@ public class Set {
     public boolean contains(String element) {
         return this.set.contains(element);
     }
+    public int size() {
+        return set.size();
+    }
 
     //
     // SET OPERATIONS
@@ -87,6 +90,33 @@ public class Set {
     }
 
     // TODO Power Set of a given set
+    public HashSet<HashSet<String>> powerSet() {
+        return generateSubsets(new ArrayList<>(this.set), 0);
+    }
+
+    private HashSet<HashSet<String>> generateSubsets(List<String> elements, int index) {
+        HashSet<HashSet<String>> allSubsets;
+
+        // Base Case
+        if (index == elements.size()) {
+            allSubsets = new HashSet<>();
+            allSubsets.add(new HashSet<>()); // add empty set
+        } else {
+            allSubsets = generateSubsets(elements, index + 1); // Recursive Case
+            String element = elements.get(index);
+            HashSet<HashSet<String>> moreSubsets = new HashSet<>();
+
+            for (HashSet<String> subset : allSubsets) {
+                HashSet<String> newSubset = new HashSet<>(subset);
+                newSubset.add(element);
+                moreSubsets.add(newSubset);
+            }
+
+            allSubsets.addAll(moreSubsets);
+        }
+
+        return allSubsets;
+    }
 
     @Override
     public String toString() {
