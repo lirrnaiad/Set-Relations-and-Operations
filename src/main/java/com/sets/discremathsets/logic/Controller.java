@@ -247,6 +247,7 @@ public class Controller {
         }
     }
 
+    // Power Set or Complement Windows
     @FXML
     protected void calculatePowerSetOrComplement() {
         if (powerSetOrComplementButton.getText().equals("Power Set")) {
