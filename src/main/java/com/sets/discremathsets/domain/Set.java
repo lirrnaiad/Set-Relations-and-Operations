@@ -3,7 +3,6 @@ package com.sets.discremathsets.domain;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Set {
     private HashSet<String> set;
@@ -89,7 +88,6 @@ public class Set {
         return this.set.isEmpty();
     }
 
-    // TODO Power Set of a given set
     public HashSet<HashSet<String>> powerSet() {
         return generateSubsets(new ArrayList<>(this.set), 0);
     }
