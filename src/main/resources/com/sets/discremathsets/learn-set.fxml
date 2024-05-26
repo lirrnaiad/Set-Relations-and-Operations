@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label text="What is a set?">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </VBox.margin>
+      </Label>
+      <Label alignment="TOP_LEFT" prefHeight="171.0" prefWidth="527.0" text="Sets are a collection of well-defined objects or elements. A set is represented by a capital letter symbol and the number of elements in the finite set is represented as the cardinal number of a set in a curly bracket {…}. For example, set A is a collection of all the natural numbers, such as A = {1,2,3,4,5,6,7,8,…..∞}." textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label text="Sets can be represented in three forms:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label text="1. Roster Form: Example - Set of even numbers less than 8={2,4,6}">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label text="2. Statement Form: Example - A = {Set of Odd numbers less than 9}">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label text="3. Set Builder Form: Example - A = {x ∈ N| 0 &lt; x &lt; 11}">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>

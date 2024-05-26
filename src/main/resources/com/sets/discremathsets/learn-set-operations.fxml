@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sets.discremathsets.logic.LearnSetOperationsController">
+    <children>
+        <HBox>
+            <children>
+                <VBox prefHeight="600.0" prefWidth="152.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#onSetOperationsClick" prefHeight="120.0" prefWidth="146.0" text="Set Operations">
+                            <font>
+                                <Font name="System Bold Italic" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onComplementClick" prefHeight="120.0" prefWidth="161.0" text="Complement">
+                            <font>
+                                <Font name="System Bold Italic" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onAction="#onUnionClick" prefHeight="120.0" prefWidth="161.0" text="Union">
+                            <font>
+                                <Font name="System Bold Italic" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#onIntersectionClick" prefHeight="120.0" prefWidth="161.0" text="Intersection">
+                            <font>
+                                <Font name="System Bold Italic" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="85.0" mnemonicParsing="false" onAction="#onDifferenceClick" prefHeight="120.0" prefWidth="161.0" text="Difference">
+                            <font>
+                                <Font name="System Bold Italic" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <Separator orientation="VERTICAL" prefHeight="200.0" />
+            </children>
+        </HBox>
+        <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="653.0">
+            <children>
+                <Label fx:id="titleLabel" text="Set Operations">
+                    <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </Label>
+                <Label fx:id="notationLabel" opacity="0.0">
+                    <font>
+                        <Font name="System Italic" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="descriptionLabel" alignment="TOP_LEFT" prefHeight="321.0" prefWidth="570.0" text="Set operations can be defined as the operations that are performed on two or more sets to obtain a single set containing a combination of elements from both all the sets being operated upon." textAlignment="JUSTIFY" wrapText="true">
+                    <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Label text="Examples:">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="exampleOneLabel" alignment="TOP_CENTER" prefHeight="35.0" prefWidth="545.0" text="Union of Sets">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="exampleTwoLabel" alignment="TOP_CENTER" layoutX="62.0" layoutY="353.0" prefHeight="35.0" prefWidth="545.0" text="Intersection of Sets">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="exampleThreeLabel" alignment="TOP_CENTER" layoutX="62.0" layoutY="397.0" prefHeight="35.0" prefWidth="545.0" text="Difference of Sets">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+    </children>
+</HBox>

@@ -5,10 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.TextField;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 
 import com.sets.discremathsets.domain.Set;
 import javafx.stage.Stage;
@@ -35,6 +32,13 @@ public class Controller {
     public Label DifferenceBMinusAResultLabel;
     public CheckBox notationToggle;
     public Button powerSetOrComplementButton;
+    public MenuItem learnSet;
+    public MenuItem learnSetRelations;
+    public MenuItem learnSetOperations;
+    public MenuItem helpUsage;
+    public MenuItem helpAbout;
+    public MenuItem helpCredits;
+
 
     // Instance variable to check whether current mode is set relations or not. True by default
     private boolean modeIsSetRelations = true;
@@ -274,6 +278,52 @@ public class Controller {
                 e.printStackTrace();
                 System.err.println("Failed to open new window: " + e.getMessage());
             }
+        }
+    }
+
+    // Menu Items
+    @FXML
+    protected void onLearnSetClick() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("learn-set.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+            Stage stage = new Stage();
+            stage.setTitle("Set Definition");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Failed to open new window: " + e.getMessage());
+        }
+    }
+
+    @FXML
+    protected void onLearnSetRelationsClick() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("learn-set-relations.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+            Stage stage = new Stage();
+            stage.setTitle("Set Relations");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Failed to open new window: " + e.getMessage());
+        }
+    }
+
+    @FXML
+    protected void onLearnSetOperationsClick() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("learn-set-operations.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+            Stage stage = new Stage();
+            stage.setTitle("Set Operations");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Failed to open new window: " + e.getMessage());
         }
     }
 }
