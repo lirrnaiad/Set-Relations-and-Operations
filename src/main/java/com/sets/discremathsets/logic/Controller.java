@@ -1,13 +1,19 @@
 package com.sets.discremathsets.logic;
 
+import com.sets.discremathsets.Application;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 import com.sets.discremathsets.domain.Set;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashSet;
 
@@ -28,6 +34,7 @@ public class Controller {
     public Label DifferenceBMinusALabel;
     public Label DifferenceBMinusAResultLabel;
     public CheckBox notationToggle;
+    public Button powerSetOrComplementButton;
 
     // Instance variable to check whether current mode is set relations or not. True by default
     private boolean modeIsSetRelations = true;
@@ -206,6 +213,7 @@ public class Controller {
             modeIsSetRelations = false;
             resultsButton.setText("Get Set Operations");
             toggleButton.setText("Switch to Set Relations");
+            powerSetOrComplementButton.setText("Complement");
 
             onResultsButtonClick();
 
@@ -217,6 +225,7 @@ public class Controller {
             modeIsSetRelations = true;
             resultsButton.setText("Get Set Relations");
             toggleButton.setText("Switch to Set Operations");
+            powerSetOrComplementButton.setText("Power Set");
 
             onResultsButtonClick();
 
@@ -235,6 +244,35 @@ public class Controller {
             updateSetRelations();
         } else {
             updateSetOperations();
+        }
+    }
+
+    @FXML
+    protected void calculatePowerSetOrComplement() {
+        if (powerSetOrComplementButton.getText().equals("Power Set")) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("powerset-window.fxml"));
+                Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+                Stage stage = new Stage();
+                stage.setTitle("Power Set");
+                stage.setScene(scene);
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+                System.err.println("Failed to open new window: " + e.getMessage());
+            }
+        } else {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("complement-window.fxml"));
+                Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+                Stage stage = new Stage();
+                stage.setTitle("Complement");
+                stage.setScene(scene);
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+                System.err.println("Failed to open new window: " + e.getMessage());
+            }
         }
     }
 }
