@@ -47,7 +47,7 @@ public class Set {
         return setDifference;
     }
 
-    // Overloaded method for bug fixing, disregard for now
+    // Overloaded method to be used for complement() method
     public HashSet<String> difference(HashSet<String> setTwo) {
         HashSet<String> setDifference = new HashSet<>(this.set);
         setDifference.removeAll(setTwo);
