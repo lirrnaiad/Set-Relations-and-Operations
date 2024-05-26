@@ -243,13 +243,6 @@
                   <MenuItem fx:id="learnSetOperations" mnemonicParsing="false" onAction="#onLearnSetOperationsClick" text="Set Operations" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-                  <MenuItem fx:id="helpUsage" mnemonicParsing="false" text="Usage" />
-              <MenuItem fx:id="helpAbout" mnemonicParsing="false" text="About" />
-                  <MenuItem fx:id="helpCredits" mnemonicParsing="false" text="Credits" />
-            </items>
-          </Menu>
         </menus>
       </MenuBar>
    </top>
