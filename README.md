@@ -107,7 +107,7 @@ To fix this, make sure to download the appropriate JDK from the **Installing** s
 After this, make sure to change the PATH to the ``jdk-21`` folder (or similar). You can do this in two ways:  
 #### Setting Temporary Path
 * Copy the path of jdk/bin directory where Java is located (C:\Program Files\Java\jdk_version\bin)
-* Write the command: ``SET PATH=C:\Program Files\Java\jdk_version\bin`` and hit enter.
+* Write the command: ``SET PATH=C:\Program Files\Java\jdk-21\bin`` and hit enter.
 * Run ``java -version`` again to check if it was successfully changed.
 
 ```
