@@ -73,7 +73,8 @@ It may show another line like this, you can disregard it:
 WARNING: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @75c7137'
 ```
 
-If any errors occur, refer to the next section.
+If any errors occur, refer to the next section.  
+<br>
 
 ## Help
 
@@ -127,6 +128,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 21.0.1+12-LTS-29, mixed mode, sharing)
 * Click on New tab of User variables, assign value ``JAVA_HOME`` to Variable Name
 * ``java\jdk-21\bin`` path (copied path) to Variable Value and click on OK Button
 * Finally, click on OK button.
+<br>
 
 ## Version History
 
